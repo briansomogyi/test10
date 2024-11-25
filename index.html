@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Button Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <style>
+        .menu-content {
+            display: none;
+        }
+
+        .menu-content.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="relative">
+        <button type="button" id="menu-button" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+            <i class="bi bi-list"></i> Menu
+        </button>
+        <div id="menu-content" class="menu-content absolute bg-white shadow-md rounded-md mt-2 p-4">
+            <a href="#" class="block text-blue-500 mb-2"><i class="bi bi-house"></i> Home</a>
+            <a href="#" class="block text-blue-500 mb-2"><i class="bi bi-newspaper"></i> News Feed</a>
+            <a href="#" class="block text-blue-500 mb-2"><i class="bi bi-question-circle"></i> Answer</a>
+            <a href="#" class="block text-blue-500 mb-2"><i class="bi bi-people"></i> Spaces</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+            document.getElementById('menu-content').classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
